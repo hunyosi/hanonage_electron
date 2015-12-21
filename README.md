@@ -1,0 +1,2 @@
+# hanonage_electron
+半音上げプラグイン大会で作成したUTAU用半音上げプラグインのElectron版です。

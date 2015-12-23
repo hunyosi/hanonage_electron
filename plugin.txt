@@ -1,3 +1,3 @@
-name=半音上げプラグインElextron版
+name=半音上げプラグインElectron版
 execute=bin\hanonage_electron.exe
 ustversion=1.00

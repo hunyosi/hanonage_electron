@@ -1,0 +1,4 @@
+type=editplugin
+folder=hanonage_electron
+contentsdir=hanonage_electron
+description=半音上げプラグイン大会で作成したUTAU用半音上げプラグインのElectron版です。

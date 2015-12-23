@@ -1,0 +1,29 @@
+{
+  "name": "hanonage_electron",
+  "version": "1.0.0",
+  "description": "半音上げプラグイン大会で作成したUTAU用半音上げプラグインのElectron版です。",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunyosi/hanonage_electron.git"
+  },
+  "keywords": [
+    "UTAU",
+    "plugin"
+  ],
+  "author": "Hunyosi Asakura",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/hunyosi/hanonage_electron/issues"
+  },
+  "homepage": "https://github.com/hunyosi/hanonage_electron#readme",
+  "dependencies": {
+    "electron-packager": "^5.2.0",
+    "iconv-lite": "^0.4.13",
+    "jszip": "^2.5.0"
+  }
+}

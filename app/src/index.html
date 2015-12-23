@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+ hanonage_electron-app
+ file: index.html
+ author: Hunyosi Asakura
+ license: CC0-1.0
+-->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>半音上げプラグイン(Electron版)</title>
+  <script>
+    'use strict';
+    const ipc = require('ipc');
+
+    function putMsg(msg) {
+      const p = document.createElement('p');
+      p.appendChild(document.createTextNode(msg));
+      document.body.appendChild(p);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnExec = document.getElementById('btnExec');
+      btnExec.addEventListener('click', () => {
+        btnExec.disabled = true;
+        ipc.on('resultProcess', (err) => {
+          putMsg('処理が完了しました。');
+          putMsg('ウィンドウを閉じてください。');
+          putMsg('結果=' + (err == null ? '成功' : '失敗:' + err));
+        });
+        ipc.send('doProcess', true);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <button id="btnExec">半音上げる！</button>
+</body>
+
+</html>
